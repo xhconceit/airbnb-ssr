@@ -1,0 +1,35 @@
+.login-page {
+  @include flex-layout(row);
+  height: 100vh;
+  .left-part {
+    flex: 30;
+    height: 100%;
+    background-image: url("@/assets/images/auth/background.png");
+    background-size: cover;
+  }
+  .right-part {
+    flex: 20;
+    @include flex-layout(row, center, center);
+    .el-tabs__nav-scroll::after {
+      display: none;
+    }
+    .login-panel {
+      width: 300px;
+      .el-tabs__item.is-top{
+        width: inherit !important;
+        border: none;
+        box-shadow: none;
+      }
+      ::v-deep .el-tabs__nav {
+        float: initial;
+        text-align: center;
+      }
+      ::v-deep .el-tabs__item {
+        font-size: 24px;
+      }
+    }
+  }
+}
+.el-tabs__nav-wrap::after,.el-tabs__nav-wrap::after{
+  display: none;
+}

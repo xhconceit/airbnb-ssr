@@ -1,0 +1,51 @@
+.home-page {
+  .banner{
+    height: 530px;
+    width: 100%;
+    background-image: url('@/assets/images/banner.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .main-wrapper {
+    @include main-wrapper;
+  }
+  .title {
+    font-size: 22px;
+
+  }
+  .subtitle {
+    font-size: 16px;
+    margin: 5px 0 25px 0;
+  }
+  .home-list {
+    @include flex-layout(row, flex-start, center);
+    .item {
+      width: 333px;
+      overflow: hidden;
+      display: inline-block;
+      margin: 0 8px 25px 8px;
+      cursor: pointer;
+    }
+    img {
+      width: 333px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 4px;
+
+    }
+    .title {
+      width: 333px;
+      font-size: 18px;
+      margin: 15px 0;
+      font-weight: bold;
+      text-align: left;
+      @include text-overflow(1);
+      text-overflow: ellipsis;
+    }
+    .price {
+      font-size: 16px;
+      text-align: left;
+    }
+  }
+}
